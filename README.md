@@ -1,8 +1,6 @@
 ## Web clone được tạo bởi công cụ Create - react - app
 
-## facebook của tôi https://www.facebook.com/truongson2003dNOJPjoUEk4Rq5pQ3A1655449765299eoq
-
-## Cơ cấu tổ chức file 
+#### facebook của tôi https://www.facebook.com/truongson2003dNOJPjoUEk4Rq5pQ3A1655449765299e
 
 ### tổ chức theo forder
       src
