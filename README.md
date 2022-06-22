@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+## Web clone được tạo bởi công cụ Create - react - app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### facebook của tôi https://www.facebook.com/truongson2003dNOJPjoUEk4Rq5pQ3A1655449765299e
 
+<<<<<<< HEAD
 ## Available Scripts
 
 In the project directory, you can run:
@@ -1312,3 +1313,30 @@ axios is heavily inspired by the [$http service](https://docs.angularjs.org/api/
 ## License
 
 [MIT](LICENSE)
+=======
+### tổ chức theo forder
+      src
+    |__ assets
+    |  |__ images
+    |  |__ styles (global styles) 
+    |
+    |__ components (shared components)
+    |
+    |__ features
+      |__ Photo
+        |__ components
+        |  |__ PhotoList
+        |  |__ PhotoCard
+        |  |__ PhotoForm
+        |
+        |__ pages
+        |  |__ MainPage
+        |  |__ AddEditPage
+        |__ photoSlice.js
+        |__ index.js
+        
+        
+## Projext có sử dụng một số thư viện như :
+ ### customize-cra
+ ### babel-plugin-module-resolver
+>>>>>>> bae50d4d2ed5ab3b851787a3b6fe36e5c971308c
