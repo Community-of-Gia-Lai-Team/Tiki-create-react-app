@@ -3,6 +3,7 @@
 #### facebook của tôi https://www.facebook.com/truongson2003dNOJPjoUEk4Rq5pQ3A1655449765299e
 
 <<<<<<< HEAD
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -1234,7 +1235,7 @@ For example, the Form
     <input type="text" name="baz" value="5" />
 
     <select name="user.age">
-        <option value="value1">Value 1</option>
+        <opdtion value="value1">Value 1</opdtion>
         <option value="value2" selected>Value 2</option>
         <option value="value3">Value 3</option>
     </select>
@@ -1312,13 +1313,14 @@ axios is heavily inspired by the [$http service](https://docs.angularjs.org/api/
 
 ## License
 
-[MIT](LICENSE)
-=======
+# [MIT](LICENSE)
+
 ### tổ chức theo forder
+
       src
     |__ assets
     |  |__ images
-    |  |__ styles (global styles) 
+    |  |__ styles (global styles)
     |
     |__ components (shared components)
     |
@@ -1334,9 +1336,11 @@ axios is heavily inspired by the [$http service](https://docs.angularjs.org/api/
         |  |__ AddEditPage
         |__ photoSlice.js
         |__ index.js
-        
-        
+
 ## Projext có sử dụng một số thư viện như :
- ### customize-cra
- ### babel-plugin-module-resolver
->>>>>>> bae50d4d2ed5ab3b851787a3b6fe36e5c971308c
+
+### customize-cra
+
+### babel-plugin-module-resolver
+
+> > > > > > > bae50d4d2ed5ab3b851787a3b6fe36e5c971308c
