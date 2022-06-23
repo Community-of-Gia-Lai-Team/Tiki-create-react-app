@@ -6,28 +6,14 @@ import axios from 'axios';
 // môi trường  này và tương tự nó có .env.production ... và trong các môi trường đó nó cũng sẽ ưu tiên file có
 // tên theo môi trường đó ❤️❤️❤️❤️
 
-axios
-    .get('/users/search?q=hoaa&type=less', {
-        params: {
-            ID: 12345,
-        },
-    })
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
-    .then(function () {
-        // always executed
-    });
+const httpRequest = axios.create({
+    baseURL: process.env.REACT_APP_BASE_URL,
+});
 
-// Want to use async/await? Add the `async` keyword to your outer function/method.
-async function getUser() {
-    try {
-        const response = await axios.get('/user?ID=12345');
-        console.log(response);
-    } catch (error) {
-        console.error(error);
-    }
-}
+export const get = async (path, options = {}) => {
+    const reponse = await httpRequest.get(path, options);
+
+    return reponse.data;
+};
+
+export default httpRequest;

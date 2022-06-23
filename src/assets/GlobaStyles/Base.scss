@@ -1,5 +1,135 @@
 @import '~bootstrap/scss/bootstrap';
 
+// eslint-disable-next-line
 :root {
     --background-heder: rgb(26, 148, 255);
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 12px 8px;
+}
+
+.overlayContent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-text {
+    margin: 0px 0px 5px;
+    color: rgb(11, 116, 229);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content-text-span {
+    font-size: 13px;
+    color: rgb(11, 116, 229);
+    font-weight: 500;
+}
+
+.slick-list {
+    height: 274px !important;
+
+    .slick-track {
+        display: flex;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    display: inline-block !important;
+}
+
+.slick-slider.slick-initialized {
+    position: relative;
+
+    &:hover {
+        .slick-arrow {
+            transition: opacity linear 0.3s;
+            opacity: 1;
+        }
+    }
+}
+
+.slick-slide {
+    height: 274px !important;
+}
+
+.slick-prev {
+    top: 50%;
+    left: 0 !important;
+    z-index: 1;
+    width: 32px !important;
+    height: 60px !important;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    opacity: 0.4;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.slick-next {
+    top: 50%;
+    right: 0 !important;
+    transform: translateY(-50%);
+    width: 32px !important;
+    height: 60px !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    opacity: 0.4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.slick-dots {
+    display: flex !important;
+    list-style: none;
+    position: absolute;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    bottom: 12px !important;
+
+    li {
+        border-radius: 50% !important;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 10px !important;
+        height: 10px !important;
+
+        button {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            border-radius: 50%;
+            overflow: hidden;
+            border: none;
+            outline: none;
+            width: 10px !important;
+            height: 10px !important;
+
+            &::before {
+                color: transparent !important;
+            }
+        }
+    }
+
+    .slick-active {
+        button {
+            background-color: #ffffff !important;
+        }
+    }
 }

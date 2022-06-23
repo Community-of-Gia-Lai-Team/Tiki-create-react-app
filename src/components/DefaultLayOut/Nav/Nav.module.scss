@@ -2,6 +2,7 @@
     height: 100px;
     background-color: var(--background-heder);
     padding-top: 16px;
+    z-index: 100000;
 }
 
 .nav-logo {
@@ -37,13 +38,43 @@
     align-items: center;
 }
 
+.search-result-banner {
+    height: 44px;
+    padding: 8px 16px 8px 22px;
+
+    a {
+        text-decoration: none;
+        display: flex;
+        color: rgb(36, 36, 36);
+        font-weight: 500;
+
+        font-size: 13px;
+        line-height: 20px;
+        justify-content: space-between;
+
+        div {
+            img {
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
 .nav-search {
     height: 40px;
     display: flex;
     align-items: center;
     width: 800px;
     border-radius: 2px;
-    overflow: hidden;
+    z-index: 9999999999;
+    // overflow: hidden;
+    position: relative;
+
+    &:focus-within {
+        .search-container-result {
+            display: block;
+        }
+    }
 
     input {
         height: 100%;
@@ -52,6 +83,141 @@
         width: 84%;
         padding-left: 15px;
         padding-right: 60px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 20x;
+    }
+}
+
+.search-container-result {
+    position: absolute;
+    border-radius: 4px;
+    width: 84%;
+    // min-height: 300px;
+    left: 0;
+    top: 100%;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14);
+    display: none;
+}
+
+.search-container-result-item {
+    max-height: 144px;
+    overflow-y: scroll;
+    overflow-y: overlay;
+
+    a {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        padding: 0 16px;
+        color: rgb(36, 36, 36);
+        font-size: 13px;
+        line-height: 1.67;
+        text-decoration: none;
+        font-weight: 500;
+        -webkit-box-align: center;
+
+        .search-result-item-img {
+            width: 35px;
+            height: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .search-result-item-text {
+            flex: 1 1 0%;
+            padding: 0px 0px 0px 8px;
+        }
+
+        &:hover {
+            background-color: rgba(27, 168, 255, 0.1);
+            color: rgb(36, 36, 36);
+        }
+    }
+}
+
+.search-item-popular {
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+    padding: 8px 0;
+}
+
+.search-item-popular-header {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0px 0px 8px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding: 8px 16px 8px 22px;
+}
+
+.search-item-popular-grid {
+    a {
+        display: flex;
+        justify-content: center;
+        color: rgb(36, 36, 36);
+        text-decoration: none;
+        &:hover {
+            box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+            color: rgb(36, 36, 36);
+        }
+
+        div {
+            text-align: center;
+
+            img {
+                width: 64.5px;
+                height: 64.5px;
+                object-fit: contain;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            span {
+                display: block;
+                font-size: 12px;
+                line-height: 16px;
+                padding: 6px 0px 0px;
+                text-align: center;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+.search-close-loading {
+    position: absolute;
+    right: 19%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        font-size: 16px;
+    }
+
+    &:hover {
+        svg {
+            opacity: 0.7;
+        }
+    }
+
+    .search-close-loading-spinner {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -60,6 +226,8 @@
     border-radius: 0;
     border: none;
     flex: 1;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 20x;
 
     &:hover {
         border: none;
@@ -217,4 +385,8 @@
     &:hover a {
         color: white;
     }
+}
+
+.wr-fd-er {
+    z-index: 100000000;
 }

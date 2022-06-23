@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { ListNav } from '@/app/appSlice';
+import { ListHeaderHome, ListNav } from '@/app/appSlice';
 
 const store = configureStore({
     reducer: {
         listNav: ListNav,
+        listHeaderHom: ListHeaderHome,
     },
 });
 

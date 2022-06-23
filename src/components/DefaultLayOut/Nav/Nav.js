@@ -16,6 +16,8 @@ const cx = className.bind(styles);
 function Nav() {
     const ListNav = useSelector((state) => state.listNav);
 
+    const isLogin = true;
+
     return (
         <div className={cx('wrapper')}>
             <div className="container">
@@ -29,16 +31,32 @@ function Nav() {
                     </div>
                     <Search />
                     <div className={cx('nav-login-and-features')}>
-                        <div className={cx('nav-login-register')}>
-                            <img src={UserImg} alt="" />
-                            <div className={cx('nav-login-register-span')}>
-                                <p>Đăng Nhập / Đăng Ký</p>
-                                <span>
-                                    Tài khoản
-                                    <img src={ArrowDown} alt="" />
-                                </span>
+                        {isLogin ? (
+                            <div className={cx('nav-login-register')}>
+                                <img src={UserImg} alt="" />
+                                <div className={cx('nav-login-register-span')}>
+                                    <p>0869224813</p>
+                                    <span>
+                                        Tài khoản
+                                        <img src={ArrowDown} alt="" />
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        ) : (
+                            <Link to="/login">
+                                <div className={cx('nav-login-register')}>
+                                    <img src={UserImg} alt="" />
+                                    <div className={cx('nav-login-register-span')}>
+                                        <p>Đăng Nhập / Đăng Ký</p>
+                                        <span>
+                                            Tài khoản
+                                            <img src={ArrowDown} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </Link>
+                        )}
+
                         <div className={cx('nav-cart')}>
                             <div className={cx('nav-cart-img')}>
                                 <img src={CartImg} alt="" />
