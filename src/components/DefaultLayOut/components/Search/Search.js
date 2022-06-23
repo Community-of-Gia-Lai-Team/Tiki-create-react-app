@@ -50,6 +50,8 @@ function Search() {
         setSearchText('');
     };
 
+    console.log(searchResult);
+
     return (
         <div className={cx('nav-search')}>
             <input
