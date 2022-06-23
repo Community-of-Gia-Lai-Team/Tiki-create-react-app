@@ -68,11 +68,7 @@ function Search() {
                 )}
             </div>
             <div className={cx('search-container-result')}>
-                {searchResult.length > 0 && searchResult ? (
-                    <AccountItem data={searchResult} />
-                ) : (
-                    <SearchRenderDefalut />
-                )}
+                {searchResult.length > 0 ? <AccountItem data={searchResult} /> : <SearchRenderDefalut />}
             </div>
         </div>
     );
