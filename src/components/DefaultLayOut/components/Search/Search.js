@@ -32,6 +32,9 @@ function Search() {
             const results = await SearchServices.Search(debounceValue);
 
             setLoaing(false);
+
+            console.log(results);
+
             setSearchResult(results);
         };
 
