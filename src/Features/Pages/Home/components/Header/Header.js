@@ -12,11 +12,13 @@ function Header() {
 
     return (
         <div className={cx('wrapper', 'container')}>
-            {ListHeader.map((data, index) => (
-                <a href="https://tiki.vn/di-cho-online" key={index}>
-                    {data}
-                </a>
-            ))}
+            <div className={cx('header-frr-t')}>
+                {ListHeader.map((data, index) => (
+                    <a href="https://tiki.vn/di-cho-online" key={index}>
+                        {data}
+                    </a>
+                ))}
+            </div>
             <span>
                 <FontAwesomeIcon icon={faAngleRight} />
             </span>

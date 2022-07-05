@@ -5,6 +5,21 @@
     height: 44px;
     display: flex;
     align-items: center;
+    align-items: center;
+    display: flex;
+
+    .header-frr-t {
+        width: 95%;
+        overflow: hidden;
+        display: flex;
+        white-space: nowrap;
+        overflow-y: hidden;
+        align-items: center;
+        height: 44px;
+        // padding: 20px 0px;
+        height: 44px;
+        text-align: center;
+    }
 
     a {
         font-size: 14px;
