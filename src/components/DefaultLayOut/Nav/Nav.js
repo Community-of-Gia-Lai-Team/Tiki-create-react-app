@@ -1,6 +1,10 @@
 import className from 'classnames/bind';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 import styles from './Nav.module.scss';
 import logoTiki from '@/assets/Image/logoTiki.png';
@@ -14,9 +18,26 @@ import { ShopIcon } from '@/components/Icons';
 const cx = className.bind(styles);
 
 function Nav() {
+    const [name, setName] = useState('');
+    const [isLogin, setIslogin] = useState(false);
+
     const ListNav = useSelector((state) => state.listNav);
 
-    const isLogin = false;
+    useEffect(() => {
+        const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user) => {
+            if (!user) {
+                console.log('USer is not logged in');
+                return;
+            } else {
+                const token = await user.getIdToken();
+                console.log(user.displayName);
+                setIslogin(true);
+                setName(user.displayName);
+                console.log(token);
+            }
+        });
+        return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
@@ -35,7 +56,7 @@ function Nav() {
                             <div className={cx('nav-login-register')}>
                                 <img src={UserImg} alt="" />
                                 <div className={cx('nav-login-register-span')}>
-                                    <p>0869224813</p>
+                                    <p>{name}</p>
                                     <span>
                                         Tài khoản
                                         <img src={ArrowDown} alt="" />
