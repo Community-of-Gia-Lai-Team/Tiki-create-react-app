@@ -62,6 +62,16 @@ function Nav() {
                                         <img src={ArrowDown} alt="" />
                                     </span>
                                 </div>
+                                <div className={cx('loginout-a-r')}>
+                                    <ul>
+                                        <li>Tài Khoản Của Tôi</li>
+                                        <li>Địa Chỉ</li>
+                                        <li>Đơn Mua</li>
+                                        <li>
+                                            <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         ) : (
                             <Link to="/login">

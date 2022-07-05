@@ -28,7 +28,6 @@ function Modal() {
                 <h1>My App</h1>
                 <p>Please sign-in:</p>
                 <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-                <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
             </div>
         </div>
     );
