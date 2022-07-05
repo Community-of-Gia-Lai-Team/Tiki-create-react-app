@@ -68,7 +68,9 @@ function Nav() {
                                         <li>Địa Chỉ</li>
                                         <li>Đơn Mua</li>
                                         <li>
-                                            <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                                            <a onClick={() => firebase.auth().signOut()} href="/">
+                                                Sign-out
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
