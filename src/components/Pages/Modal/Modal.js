@@ -4,6 +4,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
 import styles from './Modal.module.scss';
+import BackGround from '@/assets/Image/efffcecb709c4ac7cf5e536694f2ea99.jpg';
 
 const cx = classNames.bind(styles);
 
