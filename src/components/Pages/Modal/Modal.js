@@ -5,6 +5,7 @@ import 'firebase/compat/auth';
 
 import styles from './Modal.module.scss';
 import BackGround from '@/assets/Image/efffcecb709c4ac7cf5e536694f2ea99.jpg';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -24,11 +25,34 @@ const uiConfig = {
 
 function Modal() {
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper')} style={{ backgroundImage: `url(${BackGround})` }}>
             <div className={cx('modal-container')}>
-                <h1>My App</h1>
-                <p>Please sign-in:</p>
-                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+                <div style={{ textAlign: 'center' }}>
+                    <h1>Tiki App </h1>
+                    <p>Bạn Hãy đăng nhập tài khoản của bạn</p>
+                </div>
+                <div>
+                    <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Link
+                        to="/"
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: '220px',
+                            height: '40px',
+                            backgroundColor: '#fff',
+                            color: '#000',
+                            textAlign: 'center',
+                            border: '1px solid #ccc',
+                            borderRadius: '4px',
+                        }}
+                    >
+                        Bạn muốn quay lại ?
+                    </Link>
+                </div>
             </div>
         </div>
     );
