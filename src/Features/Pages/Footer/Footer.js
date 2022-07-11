@@ -1,7 +1,5 @@
 function Footer() {
-    return (
-        <div>
-                );
+    return <div>Chan Trang</div>;
 }
 
 export default Footer;
