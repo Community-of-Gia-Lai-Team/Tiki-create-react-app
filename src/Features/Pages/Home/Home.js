@@ -3,6 +3,7 @@ import className from 'classnames/bind';
 import styles from './Home.module.scss';
 import Header from './components/Header';
 import { SlideOne, SlideTwo } from './components/Slide';
+import Products from '../Products';
 
 const cx = className.bind(styles);
 
@@ -14,6 +15,9 @@ function Home() {
                 <div className={cx('container')}>
                     <SlideOne />
                     <SlideTwo />
+                    <div className={cx('products')}>
+                        <Products />
+                    </div>
                 </div>
             </div>
         </div>

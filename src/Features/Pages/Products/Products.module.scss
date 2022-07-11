@@ -1,0 +1,110 @@
+.wrapper {
+    margin-top: 30px;
+}
+
+.header {
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+
+    h2 {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+}
+
+// scss Product on file './Components/RenderPro'
+.render {
+    min-height: 294px;
+    border-radius: 4px;
+    margin-top: 14px;
+}
+
+.Link-to-pro {
+    display: block;
+    border-radius: 4px;
+
+    &:hover {
+        box-shadow: rgb(0, 0, 0, 10%) 0px 0px 20px;
+        z-index: 1;
+    }
+}
+
+.header-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4px 0;
+
+    img {
+        width: 136px;
+        height: 34px;
+        object-fit: contain;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+}
+
+.image {
+    width: 182.66px;
+    height: 182.66px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.body-and-title {
+    padding: 0 6px;
+}
+
+.name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 8px;
+
+    h3 {
+        font-size: 14px;
+        margin: 0px 0px 4px;
+        line-height: 20px;
+        word-break: break-word;
+        font-weight: initial;
+        color: rgb(56, 56, 61);
+        text-decoration: none;
+    }
+}
+
+.price-discount {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 4px;
+    padding-bottom: 6px;
+    color: rgb(56, 56, 61);
+}
+
+.has-discount {
+    color: rgb(255, 66, 78);
+}
+
+.price-discount__price {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.price-discount__discount {
+    padding: 0px 2px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 8px;
+    border: 1px solid rgb(255, 66, 78);
+    border-radius: 2px;
+    background-color: rgb(255, 240, 241);
+    color: rgb(255, 66, 78);
+}
