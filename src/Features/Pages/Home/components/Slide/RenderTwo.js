@@ -1,3 +1,5 @@
+import { AppContextSave } from '@/components/Context/Context';
+import { useContext } from 'react';
 import Slider from 'react-slick';
 
 // import { PrevArrow, PrevArrowNext } from './RenderArrow';
@@ -14,42 +16,24 @@ function RenderTwo() {
         arrows: true,
     };
 
+    const { dataYouTobe } = useContext(AppContextSave);
+
     return (
         <div>
             <Slider {...settings}>
-                <div>
-                    <iframe
-                        width="100%"
-                        height="274px"
-                        src="https://www.youtube.com/embed/ysjJlvQ3FFc"
-                        title="NodeJS là gì? Tại sao phải sử dụng NodeJS trong khóa ReactJS?"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-                <div>
-                    <iframe
-                        width="100%"
-                        height="274px"
-                        src="https://www.youtube.com/embed/F5z6YoR8of0"
-                        title="Fn.bind() method P1? Học rồi thì xem lại cho chắc nha!"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-                <div>
-                    <iframe
-                        width="100%"
-                        height="274px"
-                        src="https://www.youtube.com/embed/30sMCciFIAM"
-                        title="SPA/MPA là gì?"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
+                {dataYouTobe.map((data, index) => (
+                    <div key={index}>
+                        <iframe
+                            width="100%"
+                            height="274px"
+                            src={`https://www.youtube.com/embed/${data}`}
+                            title="Tự Render Bởi Youtobe"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                ))}
             </Slider>
         </div>
     );
