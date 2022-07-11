@@ -1,5 +1,7 @@
 .wrapper {
     margin-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fff;
 }
 
 .header {
@@ -12,6 +14,32 @@
     h2 {
         font-size: 20px;
         padding-left: 10px;
+    }
+}
+
+.view-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    button {
+        cursor: pointer;
+        display: inline-block;
+        width: 240px;
+        padding: 6px 12px;
+        border-radius: 4px;
+        border: 1px solid rgb(13, 92, 182);
+        color: rgb(13, 92, 182);
+        font-size: 13px;
+        text-align: center;
+        font-weight: 500;
+
+        &:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(13, 92, 182);
+            border-color: rgb(13, 92, 182);
+        }
     }
 }
 

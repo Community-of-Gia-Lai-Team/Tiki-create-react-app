@@ -35,3 +35,13 @@ export const GETProductSlider = async (q) => {
         console.log(err);
     }
 };
+
+export const GETSliderYouTobe = async (q) => {
+    try {
+        const res = await APIget.Get('YoutobeList');
+
+        return res.data;
+    } catch (err) {
+        console.log(err);
+    }
+};

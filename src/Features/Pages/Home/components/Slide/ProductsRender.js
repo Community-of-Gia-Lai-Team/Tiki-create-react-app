@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 function ProductsRender({ ImagePro, price, reducerprice }) {
     return (
-        <a href="http://dfsf.com" className={cx('title-pro')}>
+        <a href="//" className={cx('title-pro')}>
             <div className={cx('img-f-r')}>
                 <img src={ImagePro} alt="" />
             </div>
