@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import styles from './Slide.module.scss';
 import { PriceHostIcon, FreeFast, TodayIcon } from './../../../../../components/Icons/Icon';
 import RenderTwo from './RenderTwo';
-import ProductsRender from './ProductsRender';
 import RenderThree from './RenderThree';
 
 const cx = classNames.bind(styles);

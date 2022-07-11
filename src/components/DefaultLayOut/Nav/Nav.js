@@ -26,14 +26,10 @@ function Nav() {
     useEffect(() => {
         const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user) => {
             if (!user) {
-                console.log('USer is not logged in');
                 return;
             } else {
-                const token = await user.getIdToken();
-                console.log(user.displayName);
                 setIslogin(true);
                 setName(user.displayName);
-                console.log(token);
             }
         });
         return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.

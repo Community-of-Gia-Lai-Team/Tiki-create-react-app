@@ -1,3 +1,5 @@
+import { AppContextSave } from '@/components/Context/Context';
+import { useContext } from 'react';
 import Slider from 'react-slick';
 
 import ProductsRender from './ProductsRender';
@@ -14,33 +16,16 @@ function RenderThree() {
         arrows: false,
     };
 
+    const { slider } = useContext(AppContextSave);
+
     return (
         <div>
             <Slider {...settings}>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
-                <div>
-                    <ProductsRender />
-                </div>
+                {slider.map((data, index) => (
+                    <div key={index}>
+                        <ProductsRender ImagePro={data.img} price={data.price} reducerprice={data.reducerprice} />
+                    </div>
+                ))}
             </Slider>
         </div>
     );

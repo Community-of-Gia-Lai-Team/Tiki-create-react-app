@@ -8,7 +8,15 @@ import { StarICon } from '@/components/Icons';
 
 const cx = classNames.bind(styles);
 
-function RenderPro({ ImagePro, namePro, price }) {
+RenderPro.propTypes = {
+    ImagePro: PropTypes.string,
+    namePro: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    reducerprice: PropTypes.string,
+    evaluatePro: PropTypes.string,
+};
+
+function RenderPro({ ImagePro, namePro, price, reducerprice, evaluatePro }) {
     return (
         <div className="col-sm-2">
             <div className={cx('render')}>
@@ -67,12 +75,12 @@ function RenderPro({ ImagePro, namePro, price }) {
                                     <div
                                         style={{ width: '1px', height: '9px', backgroundColor: 'rgb(199, 199, 199)' }}
                                     ></div>
-                                    <div style={{ paddingLeft: '6px' }}>Đã bán 85</div>
+                                    <div style={{ paddingLeft: '6px' }}>Đã bán {evaluatePro}</div>
                                 </div>
                             </div>
                             <div className={cx('price-discount', 'has-discount')}>
                                 <div className={cx('price-discount__price')}>{price} ₫</div>
-                                <div className={cx('price-discount__discount')}>-21%</div>
+                                <div className={cx('price-discount__discount')}>-{reducerprice}%</div>
                             </div>
                         </div>
                     </div>

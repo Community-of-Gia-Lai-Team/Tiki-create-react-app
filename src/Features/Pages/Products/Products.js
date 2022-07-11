@@ -1,19 +1,14 @@
 import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import RenderPro from './components/Render';
 
+import { AppContextSave } from '@/components/Context/Context';
 import styles from './Products.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Products() {
-    const [datas, setDatas] = useState([]);
-
-    useEffect(() => {
-        fetch('https://api-shope-done.herokuapp.com/products')
-            .then((res) => res.json())
-            .then((data) => setDatas(data));
-    }, []);
+    const { datas } = useContext(AppContextSave);
 
     return (
         <div className={cx('wrapper')}>
@@ -23,7 +18,14 @@ function Products() {
             <div style={{ backgroundColor: '#fff' }}>
                 <div className="row">
                     {datas.map((data, index) => (
-                        <RenderPro ImagePro={data.img} namePro={data.name} price={data.price} key={index} />
+                        <RenderPro
+                            ImagePro={data.img}
+                            namePro={data.name}
+                            price={data.price}
+                            evaluatePro={data.evaluatePeo}
+                            reducerprice={data.reducerprice}
+                            key={index}
+                        />
                     ))}
                 </div>
             </div>

@@ -5,6 +5,7 @@ import 'firebase/compat/auth';
 
 import { Nav } from './components/DefaultLayOut';
 import Home from '@/Features/Pages/Home';
+import ContextApp from './components/Context/Context';
 
 const ModalLoad = lazy(() => import('@/components/Pages/Modal'));
 
@@ -23,7 +24,6 @@ function App() {
     useEffect(() => {
         const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user) => {
             if (!user) {
-                console.log('USer is not logged in');
                 return;
             } else {
                 const token = await user.getIdToken();
@@ -36,15 +36,17 @@ function App() {
 
     return (
         <div className="App">
-            <Nav />
-            <div>
-                <Suspense fallback={<div>...Loading....</div>}>
-                    <Routes>
-                        <Route path="/login" element={<ModalLoad />} />
-                        <Route path="/" element={<Home />} />
-                    </Routes>
-                </Suspense>
-            </div>
+            <ContextApp>
+                <Nav />
+                <div>
+                    <Suspense fallback={<div>...Loading....</div>}>
+                        <Routes>
+                            <Route path="/login" element={<ModalLoad />} />
+                            <Route path="/" element={<Home />} />
+                        </Routes>
+                    </Suspense>
+                </div>
+            </ContextApp>
         </div>
     );
 }
