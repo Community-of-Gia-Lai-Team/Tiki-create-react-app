@@ -4,6 +4,7 @@ import styles from './Home.module.scss';
 import Header from './components/Header';
 import { SlideOne, SlideTwo } from './components/Slide';
 import Products from '../Products';
+import Footer from '../Footer';
 
 const cx = className.bind(styles);
 
@@ -18,6 +19,11 @@ function Home() {
                     <div className={cx('products')}>
                         <Products />
                     </div>
+                </div>
+            </div>
+            <div>
+                <div className={cx('container')}>
+                    <Footer />
                 </div>
             </div>
         </div>
