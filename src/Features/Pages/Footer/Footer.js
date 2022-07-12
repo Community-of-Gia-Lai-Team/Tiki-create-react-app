@@ -13,7 +13,10 @@ import {
     VisaIcon,
     VNpayICon,
     ZaloPAyIcon,
-    ChainningICon
+    ChainningICon,
+    FacebookICon,
+    MeesengerIcon,
+    ZaloIcon,
 } from '@/components/Icons';
 import styles from './Footer.module.scss';
 
@@ -23,7 +26,7 @@ function Footer() {
     return (
         <div className={cx('wrapper')}>
             <div>
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-between">
                     <div className="row col">
                         <div className="footerLIY">
                             <div className="block">
@@ -283,6 +286,80 @@ function Footer() {
                                         <ChainningICon />
                                     </a>
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row col">
+                        <div className="footerLIY">
+                            <div className="block">
+                                <h4 className={cx('styles__FooterHeading', 'chungk-header')}>Kết nối với chúng tôi</h4>
+                                <p>
+                                    <a
+                                        rel="noreferrer"
+                                        href="https://www.facebook.com/tiki.vn/"
+                                        className="icon"
+                                        target="_blank"
+                                        title="Facebook"
+                                    >
+                                        <FacebookICon />
+                                    </a>
+                                    <a
+                                        rel="noreferrer"
+                                        href="https://www.facebook.com/tiki.vn/"
+                                        className="icon"
+                                        target="_blank"
+                                        title="Facebook"
+                                    >
+                                        <MeesengerIcon />
+                                    </a>
+                                    <a
+                                        rel="noreferrer"
+                                        href="https://www.facebook.com/tiki.vn/"
+                                        className="icon"
+                                        target="_blank"
+                                        title="Facebook"
+                                    >
+                                        <ZaloIcon />
+                                    </a>
+                                </p>
+                                <h4 className={cx('styles__FooterHeading', 'chungk-header')} style={{ marginTop: 20 }}>
+                                    Tải ứng dụng trên điện thoại
+                                </h4>
+                                <div className="flex">
+                                    <img
+                                        src="https://frontend.tikicdn.com/_desktop-next/static/img/footer/qrcode.png"
+                                        width="80"
+                                        height="80"
+                                        alt=""
+                                    />
+                                    <div style={{}}>
+                                        <a
+                                            rel="noreferrer"
+                                            href="https://itunes.apple.com/vn/app/id958100553"
+                                            target="_blank"
+                                            aria-label=""
+                                            style={{ height: 36 }}
+                                        >
+                                            <img
+                                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/appstore.png"
+                                                width="122"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <a
+                                            rel="noreferrer"
+                                            href="https://play.google.com/store/apps/details?id=vn.tiki.app.tikiandroid"
+                                            target="_blank"
+                                            style={{ height: 36 }}
+                                        >
+                                            <img
+                                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/playstore.png"
+                                                width="122"
+                                                alt=""
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

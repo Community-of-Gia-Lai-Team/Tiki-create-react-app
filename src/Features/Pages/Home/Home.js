@@ -21,7 +21,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div style={{ background: '#fff' }}>
                 <div className="container">
                     <Footer />
                 </div>
