@@ -18,7 +18,7 @@ RenderPro.propTypes = {
 
 function RenderPro({ ImagePro, namePro, price, reducerprice, evaluatePro }) {
     return (
-        <div className="col-sm-2">
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div className={cx('render')}>
                 <Link to="/" className={cx('Link-to-pro')}>
                     <div>

@@ -9,12 +9,14 @@ const cx = classNames.bind(styles);
 function SlideOne() {
     return (
         <div className={cx('wrapper-1')}>
-            <div className={cx('col-sm-8', 'content-d-r')}>
-                <RenderOne />
-            </div>
-            <div className={cx('col-sm-4', 'test-slide1')}>
-                <div>
-                    <img src={BannerImg} alt="" />
+            <div className="row-cols-sm-1" style={{ display: 'flex' }}>
+                <div className={cx('col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8', 'content-d-r')}>
+                    <RenderOne />
+                </div>
+                <div className={cx('col-0 col-sm-4 col-md-4 col-lg-4 col-xl-4', 'test-slide1')}>
+                    <div>
+                        <img src={BannerImg} alt="" />
+                    </div>
                 </div>
             </div>
         </div>

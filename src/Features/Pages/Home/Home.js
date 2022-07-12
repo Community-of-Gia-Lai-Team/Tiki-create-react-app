@@ -13,16 +13,16 @@ function Home() {
         <div className={cx('wrapper')}>
             <Header />
             <div className={cx('content')}>
-                <div className={cx('container')}>
+                <div className="container">
                     <SlideOne />
                     <SlideTwo />
-                    <div className={cx('products')}>
+                    <div>
                         <Products />
                     </div>
                 </div>
             </div>
             <div>
-                <div className={cx('container')}>
+                <div className="container">
                     <Footer />
                 </div>
             </div>

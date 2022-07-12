@@ -5,6 +5,58 @@
     --background-heder: rgb(26, 148, 255);
 }
 
+.footerLIY {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: rgb(128, 128, 137);
+    background-color: white;
+
+    p {
+        font-size: 12px;
+        line-height: 16px;
+        color: rgb(128, 128, 137);
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    .security {
+        margin-bottom: 8px;
+        color: rgb(128, 128, 137);
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .flex {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .block {
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.chungk-header {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
 .inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

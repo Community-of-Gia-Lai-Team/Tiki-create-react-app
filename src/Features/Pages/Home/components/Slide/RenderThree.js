@@ -14,6 +14,29 @@ function RenderThree() {
         slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: '1200px',
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: '1008px',
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: '560px',
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     const { slider } = useContext(AppContextSave);
@@ -21,11 +44,12 @@ function RenderThree() {
     return (
         <div>
             <Slider {...settings}>
-                {slider.map((data, index) => (
-                    <div key={index}>
-                        <ProductsRender ImagePro={data.img} price={data.price} reducerprice={data.reducerprice} />
-                    </div>
-                ))}
+                {slider &&
+                    slider.map((data, index) => (
+                        <div key={index}>
+                            <ProductsRender ImagePro={data.img} price={data.price} reducerprice={data.reducerprice} />
+                        </div>
+                    ))}
             </Slider>
         </div>
     );

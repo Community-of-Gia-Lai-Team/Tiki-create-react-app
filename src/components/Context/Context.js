@@ -1,12 +1,12 @@
-import { GETProduct, GETProductSlider, GETSliderYouTobe } from '@/services';
 import { createContext, useEffect, useState } from 'react';
+
+import { GETProduct, GETProductSlider } from '@/services';
 
 export const AppContextSave = createContext();
 
 function ContextApp({ children }) {
     const [datas, setDatas] = useState([]);
     const [slider, setSlider] = useState([]);
-    const [dataYouTobe, setDataYouTobe] = useState([]);
 
     useEffect(() => {
         const fetChApi = async () => {
@@ -19,17 +19,11 @@ function ContextApp({ children }) {
             setSlider(results);
         };
 
-        const fetChApi3 = async () => {
-            const results = await GETSliderYouTobe();
-            setDataYouTobe(results);
-        };
-
         fetChApi();
         fetChApi2();
-        fetChApi3();
     }, []);
 
-    return <AppContextSave.Provider value={{ datas, slider, dataYouTobe }}>{children}</AppContextSave.Provider>;
+    return <AppContextSave.Provider value={{ datas, slider }}>{children}</AppContextSave.Provider>;
 }
 
 export default ContextApp;

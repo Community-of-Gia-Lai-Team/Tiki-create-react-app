@@ -55,6 +55,7 @@
     border-radius: 4px;
 
     &:hover {
+        text-decoration: none;
         box-shadow: rgb(0, 0, 0, 10%) 0px 0px 20px;
         z-index: 1;
     }
